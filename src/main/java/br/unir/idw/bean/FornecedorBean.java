@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.unir.jsf.bean;
+package br.unir.idw.bean;
 
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
@@ -55,7 +55,5 @@ public class FornecedorBean implements Serializable {
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
-    
-    
     
 }
