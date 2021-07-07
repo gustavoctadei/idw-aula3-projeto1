@@ -1,0 +1,8 @@
+# Ignorando a pasta Target
+target/
+
+# Ignorando o arquivo de configuração do NetBeans
+nb-configuration.xml
+
+# Ignorando a pasta do asdf
+.tool-versions

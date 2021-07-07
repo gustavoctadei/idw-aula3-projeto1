@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Fornecedor cadastrado</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+
+    <h:body>
+        <h1>Fornecedor Cadastrado</h1>
+        <hr/>
+
+        <h:panelGrid columns="2">
+            <h:outputLabel value="Nome" />
+            <h:outputText value="#{fornecedorBean.nome}" />
+
+            <h:outputLabel value="CNPJ"/>
+            <h:outputText value="#{fornecedorBean.cnpj}" />
+
+            <h:outputLabel value="Cidade" />
+            <h:outputText value="#{fornecedorBean.cidade}" />
+        </h:panelGrid>
+        <hr/>
+        
+        <h:form>
+            <h:commandLink action="#{fornecedorBean.novo()}" value="Início" />
+        </h:form>
+    </h:body>
+</html>

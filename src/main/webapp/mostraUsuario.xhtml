@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Usuário cadastrado</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+
+    <h:body>
+        <h1>Usuário Cadastrado</h1>
+        <hr/>
+
+        <h:panelGrid columns="2">
+            <h:outputLabel value="Nome" />
+            <h:outputText value="#{usuarioBean.nome}" />
+
+            <h:outputLabel value="E-mail"/>
+            <h:outputLink value="mailto:#{usuarioBean.email}">
+                <h:outputText value="#{usuarioBean.email}" />
+            </h:outputLink>
+            
+            <h:outputLabel value="Data de Nascimento" />
+            <h:outputText value="#{usuarioBean.dataNascimento}">
+                <f:convertDateTime pattern="dd/MM/yyyy" />
+            </h:outputText>
+
+            <h:outputLabel value="Senha" />
+            <h:outputText value="#{usuarioBean.senha}" />
+        </h:panelGrid>
+        <hr/>
+        
+        <h:form>
+            <h:commandLink action="#{usuarioBean.novo()}" value="Início" />
+        </h:form>
+    </h:body>
+</html>

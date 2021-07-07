@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Cadastro de Usuários</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    
+    <h:body>
+        <h1>Cadastro Usuário</h1>
+        <hr/>
+        
+        <h:form>
+            <h:messages />
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Nome" for="nome" />
+                <h:inputText id="nome" label="nome" value="#{usuarioBean.nome}" required="true" />
+                
+                <h:outputLabel value="E-mail" for="email" />
+                <h:inputText id="email" label="E-mail" value="#{usuarioBean.email}" required="true" />
+                
+                <h:outputLabel value="Data de Nascimento" for="dataNascimento" />
+                <h:inputText id="dataNascimento" label="Data de Nascimento" value="#{usuarioBean.dataNascimento}" required="true">
+                    <f:convertDateTime pattern="dd/MM/yyyy" />
+                </h:inputText>
+                
+                <h:outputLabel value="Senha" for="senha" />
+                <h:inputSecret id="senha" label="Senha" value="#{usuarioBean.senha}" required="true" />
+                
+                <h:outputLabel value="Confirmar Senha" for="confirmarSenha" />
+                <h:inputSecret id="confirmarSenha" label="Confirmar Senha" value="#{usuarioBean.confirmaSenha}" required="true" />
+                
+                <h:outputText />
+                <h:commandButton action="#{usuarioBean.salvar()}" value="Salvar" />
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
