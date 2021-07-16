@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.unir</groupId>
-    <artifactId>idw-projeto1</artifactId>
+    <artifactId>idw-aula3-projeto1</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>idw-projeto1</name>
+    <name>idw-aula3-projeto1</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
